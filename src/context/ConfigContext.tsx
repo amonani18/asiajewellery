@@ -1,5 +1,7 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
-import { SiteConfig, configManager } from '../config/siteConfig'
+import React, { createContext, useContext, useState, useEffect } from 'react'
+import type { ReactNode } from 'react'
+import { configManager } from '../config/siteConfig'
+import type { SiteConfig } from '../config/siteConfig'
 
 interface ConfigContextType {
   config: SiteConfig

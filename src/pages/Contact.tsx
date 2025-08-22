@@ -36,7 +36,7 @@ const Contact = () => {
   const contactInfo = [
     {
       title: 'Visit Our Store',
-      details: '123 Jewelry Lane, Downtown District, City - 123456',
+      details: config.contact.address,
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -46,7 +46,7 @@ const Contact = () => {
     },
     {
       title: 'Call Us',
-      details: '+91 98765 43210',
+      details: config.contact.phone,
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -55,7 +55,7 @@ const Contact = () => {
     },
     {
       title: 'Email Us',
-      details: 'info@asiajweller.com',
+      details: config.contact.email,
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -216,24 +216,13 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Business Hours */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">Business Hours</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday</span>
-                    <span className="font-medium">10:00 AM - 8:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
-                    <span className="font-medium">10:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="font-medium">12:00 PM - 5:00 PM</span>
-                  </div>
-                </div>
-              </div>
+                             {/* Business Hours */}
+               <div className="bg-white rounded-lg shadow-lg p-8">
+                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">Business Hours</h3>
+                 <div className="space-y-2">
+                   <p className="text-gray-600">{config.contact.businessHours}</p>
+                 </div>
+               </div>
 
               {/* Social Media */}
               <div className="bg-white rounded-lg shadow-lg p-8">
@@ -283,8 +272,8 @@ const Contact = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <p className="text-gray-600">Interactive map will be integrated here</p>
-              <p className="text-sm text-gray-500 mt-2">123 Jewelry Lane, Downtown District, City - 123456</p>
+                             <p className="text-gray-600">Interactive map will be integrated here</p>
+               <p className="text-sm text-gray-500 mt-2">{config.contact.address}</p>
             </div>
           </div>
         </div>
